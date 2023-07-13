@@ -1,98 +1,68 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Navbar from "../Navbar";
-interface task {
+interface Task {
   title: string;
   desc: string;
 }
+ 
 
-const Edit = () => {
-  const router = useRouter();
-  const { title } = router.query;
-
-  const [task, setTask] = useState<task>({ title: '', desc: ''});
-
+const Edit = ( ) => {
   
+  const router = useRouter()
+  const { title } = router.query
+
+  const [task, setTask] = useState<Task>({ title: '', desc: '' });
 
   const updateTask = () => {
-    let tasks = localStorage.getItem("tasks");
+    let tasks = localStorage.getItem('tasks');
     if (tasks) {
-      let tasksJson: task[] = JSON.parse(tasks);
-      if (tasksJson.filter(value => value.title === title).length > 0) {
-        let index = tasksJson.findIndex(value => value.title === title);
-        tasksJson[index].title = task.title;
-        tasksJson[index].desc = task.desc;
-        localStorage.setItem("tasks", JSON.stringify(tasksJson));
-        alert("task has been updated");
+      let tasksJSON: Task[] = JSON.parse(tasks);
+      if (tasksJSON.filter(value => value.title === title).length > 0) {
+        let index = tasksJSON.findIndex(value => value.title === title);
+        tasksJSON[index].title = task.title;
+        tasksJSON[index].desc = task.desc;
+        localStorage.setItem('tasks', JSON.stringify(tasksJSON));
+        alert('Task has been updated');
       } else {
-        alert("task does not exist");
+        alert('Task does not exist');
       }
     } else {
-      localStorage.setItem("tasks", JSON.stringify([task]));
+      localStorage.setItem('tasks', JSON.stringify([task]));
     }
   };
-  
-
-
-
-
-
-
-
-
-
 
   useEffect(() => {
-    let tasks = localStorage.getItem("tasks");
+    let tasks = localStorage.getItem('tasks');
     if (tasks) {
-      let tasksJson: task[] = JSON.parse(tasks);
-      let ftask = tasksJson.filter(e => title == e.title);
-      console.log(ftask);
-      if (ftask.length > 0) {
-        setTask(ftask[0]);
+      let tasksJSON: Task[] = JSON.parse(tasks);
+      let ftodo = tasksJSON.filter(e => title == e.title);
+      console.log(ftodo);
+      if (ftodo.length > 0) {
+        setTask(ftodo[0]);
       }
     }
-  }, [router.isReady]);
-
+  }, [router?.isReady]);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTask({ ...task, [e.target.name]: e.target.value });
     console.log(task);
   };
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
   return (
-
-
-
-
     <>
 
-      <Navbar />
 
+       <Navbar />
+       
     <div className="my-2 text-3xl">
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
           <div className="bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-            <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Update a task</h2>
+            <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Update a Task</h2>
             <div className="relative mb-4">
               <label htmlFor="title" className="leading-7 text-sm text-gray-600">
-                task Title
+                Task Title
               </label>
               <input
                 onChange={onChange}
@@ -105,7 +75,7 @@ const Edit = () => {
             </div>
             <div className="relative mb-4">
               <label htmlFor="desc" className="leading-7 text-sm text-gray-600">
-                task Text
+                Task Text
               </label>
               <input
                 onChange={onChange}
@@ -120,14 +90,13 @@ const Edit = () => {
               onClick={updateTask}
               className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none w-fit hover:bg-indigo-600 rounded text-lg"
             >
-              Update task
+              Update Task
             </button>
             <p className="text-xs text-gray-500 mt-3">The best task list app out there!</p>
           </div>
         </div>
       </section>
     </div>
-
     </>
   );
 };
