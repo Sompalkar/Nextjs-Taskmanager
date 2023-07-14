@@ -1,4 +1,50 @@
+
+# Task Manager Application 
+
+  I have deployed it using [Vercel](vercel.com).
+
+  You can See the Deployment [Task manager](https://taskmanager-somnm.vercel.app/) On clicking on (Task Manager).
+
+  
+
+# Setup Local enviorment for this project 
+   Copy this Link :[Task manager ](https://github.com/Sompalkar/Nextjs-Taskmanager.git).
+
+   Open terminal and Write 
+   
+```bash
+
+git Clone https://github.com/Sompalkar/Nextjs-Taskmanager.git
+ 
+```
+
+  After That Open cloned  Folder in Vs code And Run following command.
+
+  ```bash
+   
+   npm install 
+   
+   #or 
+   npm run dev 
+
+  ```
+ 
+ After This Step It will Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
 
 ## Getting Started
 
