@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 interface Task {
   title: string;
   desc: string;
+  status:string;
 }
  
 
@@ -12,7 +13,7 @@ const Edit = ( ) => {
   const router = useRouter()
   const { title } = router.query
 
-  const [task, setTask] = useState<Task>({ title: '', desc: '' });
+  const [task, setTask] = useState<Task>({ title: '', desc: '',status:'' });
 
   const updateTask = () => {
     let tasks = localStorage.getItem('tasks');
@@ -21,7 +22,8 @@ const Edit = ( ) => {
       if (tasksJSON.filter(value => value.title === title).length > 0) {
         let index = tasksJSON.findIndex(value => value.title === title);
         tasksJSON[index].title = task.title;
-        tasksJSON[index].desc = task.desc;
+        tasksJSON[index].desc = task.desc; 
+        tasksJSON[index].status = task.status; 
         localStorage.setItem('tasks', JSON.stringify(tasksJSON));
         alert('Task has been updated');
       } else {
@@ -86,6 +88,22 @@ const Edit = ( ) => {
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
+            <div className="relative mb-4">
+            <label htmlFor="status" className="leading-7 text-sm text-gray-800">
+              Task Status
+            </label>
+            <input
+              placeholder="Todo | InProgress | Completed"
+              onChange={onChange}
+              value={task.status}
+              type="text"
+              id="status"
+              name="status"
+              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base  outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+          </div>
+
             <button
               onClick={updateTask}
               className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none w-fit hover:bg-indigo-600 rounded text-lg"

@@ -14,8 +14,8 @@ const _Navbar = () => {
     </a>
     <nav  className=" flex flex-wrap items-center text-base justify-between drop-shadow-2xl ">
       <Link href={"/Tasks"}  className="mr-5 hover:text-slate-900 ">Home</Link>
-      <Link href={"/aboutUS"}  className="mr-5 hover:text-slate-900 ">About</Link>
       <Link href={"/DisplayTodo"}  className="mr-5 hover:text-slate-900 ">My Tasks </Link>
+      <Link href={"/aboutUS"}  className="mr-5 hover:text-slate-900 ">About</Link>
       <Link href={"/contact"}  className="mr-5 hover:text-slate-900 ">Contact Us</Link> 
     </nav>
     
