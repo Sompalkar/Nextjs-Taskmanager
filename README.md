@@ -1,50 +1,35 @@
+# Task Manager Application
 
-# Task Manager Application 
+I have deployed it using [Vercel](vercel.com).
 
-  I have deployed it using [Vercel](vercel.com).
+You can See the Deployment [Task manager](https://taskmanager-somnm.vercel.app/) On clicking on (Task Manager).
 
-  You can See the Deployment [Task manager](https://taskmanager-somnm.vercel.app/) On clicking on (Task Manager).
+# Setup Local enviorment for this project
 
-  
+Copy this Link :[Task manager ](https://github.com/Sompalkar/Nextjs-Taskmanager.git).
 
-# Setup Local enviorment for this project 
-   Copy this Link :[Task manager ](https://github.com/Sompalkar/Nextjs-Taskmanager.git).
+Open terminal and Write
 
-   Open terminal and Write 
-   
 ```bash
 
 git Clone https://github.com/Sompalkar/Nextjs-Taskmanager.git
- 
+
 ```
 
-  After That Open cloned  Folder in Vs code And Run following command.
+After That Open cloned Folder in Vs code And Run following command.
 
-  ```bash
-   
-   npm install 
-   
-   #or 
-   npm run dev 
+```bash
 
-  ```
- 
- After This Step It will Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ npm install
 
+ #or
+ npm run dev
 
+```
 
-
-
-
-
-
-
-
-
+After This Step It will Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
 
 ## Getting Started
 
@@ -82,3 +67,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+hello guys just adding this for contribution
