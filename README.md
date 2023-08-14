@@ -12,7 +12,7 @@ Open terminal and Write
 
 ```bash
 
-git Clone https://github.com/Sompalkar/Nextjs-Taskmanager.git
+git Clone https://github.com/Sompalkar/Nextjs-Taskmanager.git 
 
 ```
 
