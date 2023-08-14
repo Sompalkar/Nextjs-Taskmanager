@@ -22,7 +22,7 @@ After That Open cloned Folder in Vs code And Run following command.
 
  npm install
 
- #or
+ #or 
  npm run dev
 
 ```
